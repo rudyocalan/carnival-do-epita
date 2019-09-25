@@ -41,6 +41,9 @@ class SuparodiPlayer extends Player
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
         
+        // Concrètement, ce que je fais, c'est que je choisi la décision opposé à la décision la plus prise par l'adversaire.
+        // “Le simple fait d'être est une grâce. Le simple fait de vivre est saint.” - Quelqu'un.
+        
         $opponentSide = $this->result->getStatsFor($this->opponentSide);
 
         $opponentScissors = $opponentSide["scissors"];
