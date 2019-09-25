@@ -4,12 +4,12 @@ namespace Hackathon\PlayerIA;
 use Hackathon\Game\Result;
 
 /**
- * Class Suparodi
+ * Class SuparodiPlayer
  * @package Hackathon\PlayerIA
- * @author Robin
+ * @author Rudy
  *
  */
-class Suparodi extends Player
+class SuparodiPlayer extends Player
 {
     protected $mySide;
     protected $opponentSide;
