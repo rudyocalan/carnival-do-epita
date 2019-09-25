@@ -4,12 +4,12 @@ namespace Hackathon\PlayerIA;
 use Hackathon\Game\Result;
 
 /**
- * Class PaperPlayer
+ * Class Suparodi
  * @package Hackathon\PlayerIA
  * @author Robin
  *
  */
-class PaperPlayer extends Player
+class Suparodi extends Player
 {
     protected $mySide;
     protected $opponentSide;
@@ -41,6 +41,8 @@ class PaperPlayer extends Player
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
         
-        return parent::paperChoice();            
+        $result = parent::paperChoice();
+        
+        return $result;            
   }
 };
