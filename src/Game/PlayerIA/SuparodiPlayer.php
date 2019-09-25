@@ -41,8 +41,23 @@ class SuparodiPlayer extends Player
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
         
-        $result = parent::paperChoice();
-        
-        return $result;            
+        $decisions = array(parent::rockChoice(), parent::paperChoice(), parent::scissorsChoice());
+
+        $opponentSide = $this->result->getStatsFor($this->opponentSide);
+
+        $opponentScissors = $opponentSide["scissors"];
+        $opponentRock = $opponentSide["rock"];
+        $opponentPaper = $opponentSide["paper"];
+
+        if ($opponentScissors > $opponentPaper) {
+          if ($opponentScissors > $opponentRock) {
+            return parent::rockChoice();
+          }
+          return parent::paperChoice();
+        }
+        if ($opponentPaper > $opponentRock) {
+          return parent::scissorsChoice();
+        }
+        return parent::paperChoice();
   }
 };
